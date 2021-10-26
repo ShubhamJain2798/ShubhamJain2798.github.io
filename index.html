@@ -17,6 +17,19 @@
     </body>
     <script>
         mySpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+            "data": {"url": ""},
+            "mark": "circle",
+            "encoding": {
+                "x": {"field": "Year Constructed", "type": "quantitative"},
+                "y": {"field": "Square Footage", "type": "quantitative"}
+            }
+        };
+        vegaEmbed('#myviz', mySpec);
+    </script>
+</html>
+
+<!-- {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "data": {
         "values": [
@@ -32,7 +45,4 @@
         "y": { "field": "B", "type": "quantitative"},
         "size": { "field": "C", "type": "quantitative"}
     }
-};
-        vegaEmbed('#myviz', mySpec);
-    </script>
-</html>
+}; -->
