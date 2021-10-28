@@ -13,44 +13,44 @@
         
     </body>
     <script>
-        mySpec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": "container",
-    "title": "Scatter plot for Year Constructed vs Year Acquired",
-    "data": {"url": "https://raw.githubusercontent.com/ShubhamJain2798/ShubhamJain2798.github.io/classwork-shubham/building_inventory.csv"},
-    "params": [{
-        "name": "paintbrush",
-        "select": {
-        "type": "point",
-        "on": "mouseover"}
-    }],
-    "transform":[
-        {"filter": {"field": "Year Constructed", "gt": 0}},
-        {"filter": {"field": "Year Acquired", "gt": 0}}
-    ],
-    "mark": {"type": "circle", "tooltip": true},
-    "encoding": {
-        "x": {"field": "Year Constructed",
-         "type": "quantitative",
-         "scale": {"zero": false}
-         },
-        "y": {"field": "Year Acquired",
-         "type": "quantitative",
-         "scale": {"zero": false}
-            },
-        "color": {
-        "condition": {
-            "param": "paintbrush",
-            "field": "Year Constructed",
-            "type": "quantitative",
-            "scale": {"scheme": "yelloworangebrown"}
-        },
-        "value": "grey"
-        },
-        "size": {"value": 75}
-        }
-    };
-        vegaEmbed('#myviz', mySpec);
+    //     mySpec = {
+    // "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    // "width": "container",
+    // "height": "container",
+    // "title": "Scatter plot for Year Constructed vs Year Acquired",
+    // "data": {"url": "https://raw.githubusercontent.com/ShubhamJain2798/ShubhamJain2798.github.io/classwork-shubham/building_inventory.csv"},
+    // "params": [{
+    //     "name": "paintbrush",
+    //     "select": {
+    //     "type": "point",
+    //     "on": "mouseover"}
+    // }],
+    // "transform":[
+    //     {"filter": {"field": "Year Constructed", "gt": 0}},
+    //     {"filter": {"field": "Year Acquired", "gt": 0}}
+    // ],
+    // "mark": {"type": "circle", "tooltip": true},
+    // "encoding": {
+    //     "x": {"field": "Year Constructed",
+    //      "type": "quantitative",
+    //      "scale": {"zero": false}
+    //      },
+    //     "y": {"field": "Year Acquired",
+    //      "type": "quantitative",
+    //      "scale": {"zero": false}
+    //         },
+    //     "color": {
+    //     "condition": {
+    //         "param": "paintbrush",
+    //         "field": "Year Constructed",
+    //         "type": "quantitative",
+    //         "scale": {"scheme": "yelloworangebrown"}
+    //     },
+    //     "value": "grey"
+    //     },
+    //     "size": {"value": 75}
+    //     }
+    // };
+        vegaEmbed('#myviz', "https://raw.githubusercontent.com/ShubhamJain2798/ShubhamJain2798.github.io/classwork-shubham/vega-viz.json");
     </script>
 </html>
